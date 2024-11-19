@@ -18,14 +18,14 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
 }
 
 nav {
-  width: 80%;
+  width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,6 +33,7 @@ nav {
   padding: 15px 25px;
   border: 1px solid #EAEAEA;
   border-radius: 13px;
+  background-color: #ffffff;
 }
 
 #logo span {
@@ -126,7 +127,17 @@ nav {
 }
 
 
+@media screen and (min-width: 640px) {
+  nav {
+    max-width: 640px!important;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  nav {
+    max-width: 768px!important;
+  }
+
   #dropdown-menu {
     display: none;
   }
@@ -152,5 +163,17 @@ nav {
   #nav-menu ul li a {
     text-decoration: none;
     color: var(--text-primary);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    max-width: 1024px!important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  nav {
+    max-width: 1280px!important;
   }
 }
