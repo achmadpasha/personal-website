@@ -1,23 +1,25 @@
-const menuToggle = document.querySelector('#toggle')
-const menuItem = document.querySelector('#menu-item')
+// dropdown menu
+const menuToggle = document.querySelector('#toggle');
+const menuItem = document.querySelector('#menu-item');
 
 menuToggle.addEventListener('click', function() {
-  menuItem.classList.toggle('show')
-})
+  menuItem.classList.toggle('show');
+});
 
 
+// auto type
 document.addEventListener("DOMContentLoaded", function () {
   const autoType = document.getElementById("autotype");
-  const textArray = ["Tech Enthusias", "Programmer", "Junior Web Developer"];
+  const strings = ["Tech Enthusiast", "Programmer", "Junior Web Developer"];
 
   let pipe = true;
   let index = 0;
-  let speed = 75;
+  let speed = 70;
   let isTyping = true;
   let textIndex = 0;
 
   function typeText() {
-    let text = textArray[textIndex];
+    let text = strings[textIndex];
     if (pipe) {
       text += "|";
     }
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         index--;
       } else {
         isTyping = true;
-        textIndex = (textIndex + 1) % textArray.length;
+        textIndex = (textIndex + 1) % strings.length;
       }
     }
 
@@ -44,3 +46,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   typeText();
 });
+
+
+// project accordion
+const viewProject = document.querySelectorAll('.view-btn');
+const projectDesc = document.querySelectorAll('.project-description');
+const chevron = document.querySelectorAll('.chevron-container');
+
+for (let i = 0; i < viewProject.length; i++) {
+  viewProject[i].addEventListener('click', function() {
+    projectDesc[i].classList.toggle('show');
+    chevron[i].classList.toggle('rotate');
+  });
+};

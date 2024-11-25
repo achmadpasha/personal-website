@@ -6,7 +6,7 @@
 
 :root {
   --font-poppins: Poppins, sans-serif;
-  --text-primary: #252525;
+  --text-primary: black;
   --text-xs: 12px;
   --text-sm: 14px;
   --text-base: 16px;
@@ -23,8 +23,23 @@
 }
 
 body {
-  position: relative;
   font-family: var(--font-poppins);
+  position: relative;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* phone (max: 639px) */
