@@ -22,24 +22,25 @@
   --text-9xl: 128px;
 }
 
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   font-family: var(--font-poppins);
   position: relative;
   overflow-x: hidden;
-}
-body::-webkit-scrollbar {
-  width: 8px;
-}
-body::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 6px;
-}
-body::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 #container {
@@ -119,7 +120,7 @@ nav {
   position: absolute;
   right: 0;
   margin-top: 10px;
-  padding: 30px 50px;
+  padding: 20px 0;
   transform-origin: top;
   transform: scaleY(0);
   opacity: 0;
@@ -145,15 +146,16 @@ nav {
   transition: all .3s ease-out;
 }
 
-#menu-item ul li:first-child,
-#menu-item ul li:nth-child(2),
-#menu-item ul li:nth-child(3) {
-  margin-bottom: 15px;
-}
-
 #menu-item ul li a {
   text-decoration: none;
   color: var(--text-primary);
+  display: block;
+  width: 100%;
+  padding: 7px 25px;
+  transition: all .2s ease-in;
+} #menu-item ul li a:hover {
+  background-color: #EFEFEF;
+  transition: all .2s ease-out;
 }
 
 #nav-menu {
@@ -163,6 +165,7 @@ nav {
 
 /* Content */
 section {
+  /* width: 100%; */
   padding: 120px 0;
 }
 
@@ -406,12 +409,11 @@ section {
   height: 13px;
   border-right: 3px solid gray;
   border-bottom: 3px solid gray;
-  /* border-radius: 10px; */
 }
 
 .project-description {
   height: 0;
-  padding: 0 24px;
+  padding: 0 20px;
   transform-origin: top;
   transform: scaleY(0);
   opacity: 0;
@@ -476,6 +478,7 @@ aside {
 
 #profile {
   width: 376px;
+  margin: 0 auto;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   background-color: #F1F1F1;
@@ -597,12 +600,13 @@ aside {
 /* Footer Section Start */
 footer {
   margin-top: 150px;
-  padding: 10px;
-  border-top: 1px solid black;
+  padding: 20px;
+  /* border-top: 1px solid black; */
 }
 
 footer p {
   text-align: center;
+  font-weight: 500;
 }
 /* Footer Section End */
 
@@ -615,11 +619,9 @@ footer p {
     max-width: 640px;
   }
 
-  /* Header Section */
   nav {
     max-width: 640px!important;
   }
-  /* Header Section */
 }
 
 @media screen and (min-width: 768px) {
@@ -627,7 +629,6 @@ footer p {
     max-width: 768px;
   }
 
-  /* Header Section */
   nav {
     max-width: 768px!important;
   }
@@ -658,13 +659,6 @@ footer p {
     text-decoration: none;
     color: var(--text-primary);
   }
-  /* Header Section */
-
-  /* Home Section */
-  #home #name {
-    font-size: var(--text-5xl);
-  }
-  /* Home Section */
 }
 
 @media screen and (min-width: 1024px) {
@@ -672,17 +666,26 @@ footer p {
     max-width: 1024px;
   }
 
-  /* Header Section */
   nav {
     max-width: 1024px!important;
   }
-  /* Header Section */
 
-  /* Home Section */
-  #home #name {
-    font-size: calc(var(--text-6xl) - 8px);
+  #profile {
+    width: 600px;
   }
-  /* Home Section */
+
+  #profile-head blockquote {
+    font-size: var(--text-base);
+  }
+
+  #contact #social-media article p:first-child {
+    display: inline;
+  }
+
+  #contact #social-media article p:last-child {
+    margin-top: 0;
+    display: inline;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -690,19 +693,58 @@ footer p {
     max-width: 1280px;
   }
 
-  /* Header Section */
   nav {
     max-width: 1280px!important;
-  }
-  /* Header Section */
-
-  /* Home Section */
-  #home #name {
-    font-size: var(--text-6xl);
   }
 
   #home span, #autotype {
     font-size: var(--text-lg);
   }
-  /* Home Section */
+
+  #content-container {
+    display: flex;
+    column-gap: 30px;
+    position: relative;
+  }
+
+  #about {
+    padding-top: 300px;
+    width: 65%;
+  }
+
+  #project {
+    width: 100%;
+  }
+
+  .accordion .view-btn {
+    padding: 24px 32px;
+  }
+
+  .project-name {
+    width: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-name h4 {
+    font-size: var(--text-3xl);
+    font-weight: 500;
+  }
+
+  .project-description {
+    padding: 0 32px;
+  } .project-description.show {
+    padding-bottom: 24px;
+  }
+  
+  aside {
+    height: fit-content;
+    position: absolute;
+    right: 0;
+  }
+
+  #profile {
+    width: 376px;
+  }
 }
