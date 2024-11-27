@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // project accordion
 const viewProject = document.querySelectorAll('.view-btn');
 const projectDesc = document.querySelectorAll('.project-description');
-const chevron = document.querySelectorAll('.chevron-container');
+const chevron = document.querySelectorAll('.chevron');
 
 for (let i = 0; i < viewProject.length; i++) {
   viewProject[i].addEventListener('click', function() {
