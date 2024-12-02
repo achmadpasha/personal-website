@@ -663,6 +663,7 @@ footer {
 
 footer p {
   text-align: center;
+  font-size: var(--text-xs);
   font-weight: 500;
 }
 /* Footer Section End */
@@ -683,6 +684,27 @@ footer p {
 
   nav {
     max-width: 640px!important;
+  }
+
+  
+  #home #greetings {
+    font-size: var(--text-2xl);
+  }
+
+  #home #name {
+    font-size: calc(var(--text-6xl) - 5px);
+  }
+
+  #home span {
+    font-size: var(--text-base)!important;
+  }
+
+  #home span #autotype {
+    font-size: var(--text-base)!important;
+  }
+
+  footer p {
+    font-size: var(--text-sm);
   }
 }
 
@@ -719,6 +741,22 @@ footer p {
     color: var(--pink-600);
     background-color: var(--pink-100);
     transition: all .3s ease-out;
+  }
+
+  #home #greetings {
+    font-size: calc(var(--text-3xl) - 3px);
+  }
+
+  #home #name {
+    font-size: var(--text-6xl);
+  }
+
+  #home span {
+    font-size: var(--text-lg)!important;
+  }
+
+  #home span #autotype {
+    font-size: var(--text-lg)!important;
   }
 }
 
@@ -816,5 +854,4 @@ footer p {
   #profile {
     width: 376px;
   }
-
 }
