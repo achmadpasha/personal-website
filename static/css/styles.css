@@ -213,17 +213,17 @@ section {
 }
 
 #home #name {
-  font-size: var(--text-6xl);
+  font-size: var(--text-5xl);
 }
 
 #home span {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: 500;
 }
 
 #autotype {
   font-family: var(--font-poppins);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--pink-700);
   border: none;
@@ -670,6 +670,11 @@ footer p {
 
 
 /* Responsive Breakpoints */
+@media screen and (max-width: 420px) {
+  #profile {
+    width: 100%;
+  }
+}
 
 @media screen and (min-width: 640px) {
   #container {
