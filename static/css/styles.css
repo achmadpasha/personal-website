@@ -71,22 +71,19 @@ h1, h4, h5 {
 header {
   position: fixed;
   top: 0;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  left: 0;
+  right: 0;
   background-color: #FFFFFF;
+  box-shadow: 0 3px 5px #EAEAEA;
   z-index: 50;
 }
 
 nav {
-  width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px auto 0 auto;
-  padding: 20px 30px;
-  box-shadow: 0 3px 5px #EAEAEA;
-  border: 1px solid #F1F1F1;
-  border-radius: 15px;
+  margin: 0px auto 0 auto;
+  padding: 15px 30px;
   background-color: #FFFFFF;
 }
 
@@ -345,6 +342,17 @@ section {
   margin: 0 12px 0 -5px;
   border-radius: 10px;
   background-color: var(--pink-600);
+}
+
+.ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 #education .date {
